@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="#" />
+    <title>Custon Video Player</title>
+  </head>
+  <body>
+    <h1>CUSTOM PLAYER</h1>
+    <div class="player">
+      <video controls>
+        <source src="sintel-short.mp4" type="video/mp4" />
+      </video>
+
+      <div class="controls">
+        <div>
+          <button class="play control" aria-label="play pause toggle">
+            <i class="fas fa-play fa-2x"></i>
+          </button>
+          <button class="stop control" aria-label="stop">
+            <i class="fas fa-stop fa-2x"></i>
+          </button>
+        </div>
+
+        <div class="timer">
+          <input
+            type="range"
+            class="timerBar"
+            min="0"
+            max="100"
+            step="0.1"
+            value="0"
+          />
+          <span aria-label="timer">00:00</span>
+        </div>
+        <div>
+          <button class="rwd control" aria-label="rewind">
+            <i class="fas fa-backward fa-2x"></i>
+          </button>
+          <button class="fwd control" aria-label="fast foward">
+            <i class="fas fa-forward fa-2x"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
