@@ -68,3 +68,19 @@ video {
   position: absolute;
   right: 156px;
 }
+
+.bottom {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  padding: 3px 10px;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: -6px;
+  border-radius: 0 0 10px 10px;
+}
+
+.fa-headphones {
+  margin-right: 10px;
+  color: rgb(31, 42, 54);
+}
