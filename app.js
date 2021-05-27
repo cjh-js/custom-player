@@ -7,6 +7,7 @@ const fwd = document.querySelector('.fwd');
 const timerWrap = document.querySelector('.timer');
 const timer = document.querySelector('.timer span');
 const timerBar = document.querySelector('.timerBar');
+const audioBar = document.querySelector('.audio');
 
 // Setting rwd, fwd
 let intervalRwd;
@@ -55,6 +56,7 @@ function playPauseMedia(e){
     if(media.paused){
         icon.className = 'fas fa-pause fa-2x';
         media.play();
+        console.log(media.volume)
     } else {
         icon.className = 'fas fa-play fa-2x';
         media.pause();
@@ -128,6 +130,10 @@ function setVideoProgress(){
     media.currentTime = (timerBar.value * media.duration) / 100;
 }
 
+function setAudioVol(){
+    media.volume = audioBar.value / 100;
+}
+
 // Event Listener
 play.addEventListener('click', playPauseMedia);
 stop.addEventListener('click', stopMedia);
@@ -137,3 +143,4 @@ media.addEventListener('ended', stopMedia);
 media.addEventListener('click', playPauseMedia);
 media.addEventListener('timeupdate', setTime);
 timerBar.addEventListener('input', setVideoProgress);
+audioBar.addEventListener('input', setAudioVol);
